@@ -1,0 +1,74 @@
+import Button from '@/components/atoms/button';
+import Line from '@/components/atoms/line';
+import { TransportServices } from '@/lib/data';
+import Image from 'next/image';
+
+export default function TransportSecton() {
+    return (
+        <section id='services' className='pt-30 pb-20 flex flex-col  gap-32'>
+            <div className="flex flex-col">
+                <div className="flex flex-col items-center space-y-8 pb-5">
+                    <h1 className='text-5xl'>ТРАНСПОРТНАЯ КОМПАНИЯ <Line /></h1>
+                    <p className='text-[#393535] font-sans text-3xl text-center flex flex-col'>
+                        <span>Китай - Россия - Беларусь</span>
+                        <span>Свои склады в Китае: Фошань/ ИУ опт</span>
+                    </p>
+                </div>
+                <div className="flex items-center gap-7">
+                    <div className='flex items-center flex-col p-5 border-3 border-[#CAE2E6] rounded-3xl flex-1 min-h-[250px]'>
+                        <Image src={"/icons/transport/1.png"} alt='icon' width={120} height={120}></Image>
+                        <ul className='list-disc'>
+                            <li>Выкуп товара для ОПТ от 1%</li>
+                            <li>Проверка товара</li>
+                            <li>Доставка</li>
+                            <li>Помощь в оплате поставщикам                        </li>
+                        </ul>
+                    </div>
+                    <div className='flex items-center flex-col p-5  border-3 border-[#CAE2E6] rounded-3xl flex-1 min-h-[250px]'>
+                        <Image src={"/icons/transport/2.png"} alt='icon' width={120} height={120}></Image>
+                        <ul className='list-disc'>
+                            <li>Обратная связь 24/7</li>
+                            <li>Отправка в этот же день</li>
+                            <li>Работаем без выходных</li>
+                        </ul>
+                    </div>
+                    <div className='flex items-center flex-col p-5 border-3 border-[#CAE2E6] rounded-3xl flex-1 min-h-[250px]'>
+                        <Image src={"/icons/transport/3.png"} alt='icon' width={120} height={120}></Image>
+                        <ul className='list-disc'>
+                            <li>Обучение по всем Китайским площадкам Taobao | 1688 | Pinduoduo | Poizon</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div className="flex space-x-7">
+                <div className="space-y-8">
+                    <h1 className='text-5xl'>Кто мы такие? <Line /></h1>
+                    <p className='font-sans text-lg max-w-xl text-[#393535]'>Наша компания занимается логистикой и перевозкой товаров между Китаем и странами СНГ уже более 5 лет. Мы сотрудничаем с проверенными складами, знаем особенности таможенного оформления и обеспечиваем полный цикл доставки – от фабрики до вашей двери.
+                        <br /><br />
+                        Пусть логистика станет вашей сильной стороной –
+                        мы всё сделаем за вас.</p>
+                </div>
+                <div className="">
+                    <Image src={"/images/transportSection.png"} alt='transport' width={568} height={335}></Image>
+                </div>
+            </div>
+            <div className="flex flex-col items-start space-y-14">
+                <h1 className='text-5xl'>Всё, что вам нужно — в одном месте <Line /></h1>
+                <div className="grid grid-cols-2 grid-rows-2 justify-between gap-7 w-full">
+                    {
+                        TransportServices.map((service) => {
+                            return (
+                                <div  key={service.id}>
+                                    <Image src={service.image} alt='service_image' width={50} height={50} />
+                                    <h2 className='text-3xl mt-4 mb-2'>{service.title}</h2>
+                                    <p className='text-lg font-sans max-w-[28rem]'>{service.description}</p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <Button title='Ознакомиться с примером'/>
+            </div>
+        </section>
+    )
+}
