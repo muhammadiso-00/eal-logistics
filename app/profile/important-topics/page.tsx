@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 export default function ImportantTopics(){
+    console.log()
     return(
         <div className="">
             <h1 className="text-5xl">Важные темы <Line/></h1>
