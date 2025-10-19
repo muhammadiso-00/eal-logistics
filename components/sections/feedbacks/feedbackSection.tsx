@@ -51,12 +51,12 @@ export default function FeedbackSection() {
         }
     };
     return (
-        <section id="feedbacks" className="space-y-7 pb-60">
-            <h1 className="text-5xl">Отзывы <Line /></h1>
-            <p className="text-lg text-[#240502] font-sans max-w-4xl">Каждый отзыв — это чей-то успешно доставленный товар, решённая задача и сохранённые нервы.
+        <section id="feedbacks" className="space-y-5 sm:space-y-7 pb-20 sm:pb-40 lg:pb-60">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Отзывы <Line /></h1>
+            <p className="text-sm sm:text-base lg:text-lg text-[#240502] font-sans max-w-4xl">Каждый отзыв — это чей-то успешно доставленный товар, решённая задача и сохранённые нервы.
                 Мы благодарны каждому, кто делится впечатлением — и стараемся становиться лучше с каждым днём.</p>
             <div className="">
-                <div className="flex ">
+                <div className="flex overflow-x-auto">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}

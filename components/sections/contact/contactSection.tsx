@@ -98,48 +98,48 @@ export default function ContactSection() {
     };
 
     return (
-        <section className="py-20 flex gap-16 max-w-7xl mx-auto">
-            <div className="space-y-10 flex-1">
-                <h1 className="text-5xl max-w-[34rem]">
+        <section className="py-10 sm:py-16 lg:py-20 flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-16 max-w-7xl mx-auto">
+            <div className="space-y-6 sm:space-y-8 lg:space-y-10 flex-1">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-[34rem]">
                     Свяжитесь с нами — мы всегда на связи! <Line />
                 </h1>
-                <p className="font-sans text-lg max-w-[25rem]">
+                <p className="font-sans text-sm sm:text-base lg:text-lg max-w-[25rem]">
                     Оставьте заявку, мы ответим на ваши вопросы и бесплатно проконсультируем
                 </p>
             </div>
-            <div className="flex-1">
-                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                    <div className="grid grid-cols-2 gap-4">
+            <div className="flex-1 w-full">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <input
                             type="text"
                             placeholder="Имя"
                             value={formData.name}
                             onChange={(e) => handleChange("name", e.target.value)}
-                            className="px-6 py-4 rounded-2xl border border-gray-400 bg-white/80 backdrop-blur-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00FCF2] transition"
+                            className="px-4 sm:px-6 py-3 sm:py-4 rounded-2xl border border-gray-400 bg-white/80 backdrop-blur-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00FCF2] transition text-sm sm:text-base"
                         />
                         <input
                             type="email"
-                            placeholder="Адрес электронной почты"
+                            placeholder="Email"
                             value={formData.email}
                             onChange={(e) => handleChange("email", e.target.value)}
-                            className="px-6 py-4 rounded-2xl border border-gray-400 bg-white/80 backdrop-blur-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00FCF2] transition"
+                            className="px-4 sm:px-6 py-3 sm:py-4 rounded-2xl border border-gray-400 bg-white/80 backdrop-blur-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00FCF2] transition text-sm sm:text-base"
                         />
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <input
                             type="tel"
                             placeholder="Номер телефона"
                             value={formData.phone}
                             onChange={(e) => handleChange("phone", e.target.value)}
-                            className="px-6 py-4 rounded-2xl border border-gray-400 bg-white/80 backdrop-blur-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00FCF2] transition"
+                            className="px-4 sm:px-6 py-3 sm:py-4 rounded-2xl border border-gray-400 bg-white/80 backdrop-blur-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00FCF2] transition text-sm sm:text-base"
                         />
                         <input
                             type="text"
-                            placeholder="Название компании"
+                            placeholder="��азвание компании"
                             value={formData.company}
                             onChange={(e) => handleChange("company", e.target.value)}
-                            className="px-6 py-4 rounded-2xl border border-gray-400 bg-white/80 backdrop-blur-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00FCF2] transition"
+                            className="px-4 sm:px-6 py-3 sm:py-4 rounded-2xl border border-gray-400 bg-white/80 backdrop-blur-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00FCF2] transition text-sm sm:text-base"
                         />
                     </div>
 
@@ -147,8 +147,8 @@ export default function ContactSection() {
                         placeholder="Введите сообщение"
                         value={formData.message}
                         onChange={(e) => handleChange("message", e.target.value)}
-                        rows={6}
-                        className="px-6 py-4 rounded-3xl border border-gray-400 bg-white/80 backdrop-blur-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00FCF2] transition resize-none"
+                        rows={5}
+                        className="px-4 sm:px-6 py-3 sm:py-4 rounded-2xl sm:rounded-3xl border border-gray-400 bg-white/80 backdrop-blur-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00FCF2] transition resize-none text-sm sm:text-base"
                     />
 
                     <div className="space-y-3 mt-2">
